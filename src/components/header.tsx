@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -54,6 +55,7 @@ export function Header() {
                 ? "bg-[#3B1E54] hover:bg-[#3B1E54]/90"
                 : "bg-white text-[#3B1E54] hover:bg-white/90"
             }`}
+            onClick={() => window.open("https://ko-fi.com/remichat", "_blank")}
           >
             Support Us
           </Button>

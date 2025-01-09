@@ -1,31 +1,14 @@
 "use client";
 import { Header } from "@/components/header";
-import { StatCard } from "@/components/stat-card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 import { AppleCardsCarouselDemo } from "@/components/apple-cards-demo";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import WordRotate from "@/components/ui/word-rotate";
 import { StatsCounter } from "@/components/stats-counter";
 import { Footer } from "@/components/footer";
+import { Features } from "@/components/features";
 export default function Home() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [menuHeight, setMenuHeight] = useState(0);
-
-  useEffect(() => {
-    const updateMenuHeight = () => {
-      const header = document.querySelector("header");
-      if (header) {
-        setMenuHeight(header.offsetHeight);
-      }
-    };
-
-    updateMenuHeight();
-    window.addEventListener("resize", updateMenuHeight);
-    return () => window.removeEventListener("resize", updateMenuHeight);
-  }, []);
-
   return (
     <div className="min-h-screen bg-[#EEEEEE]">
       <Header />
@@ -61,6 +44,9 @@ export default function Home() {
                 <Button
                   size="lg"
                   className="bg-[#9B7EBD] hover:bg-[#9B7EBD]/90 text-white w-full sm:w-auto"
+                  onClick={() =>
+                    window.open("https://ko-fi.com/remichat", "_blank")
+                  }
                 >
                   Donate
                 </Button>
@@ -89,11 +75,11 @@ export default function Home() {
       <section className="py-12 md:pt-18 md:pb-24  px-4 md:px-6 max-w-[90%] md:max-w-[80%] mx-auto">
         <div className="bg-white rounded-3xl p-6 md:p-12 shadow-lg">
           <div className="max-w-2xl mb-8 md:mb-12">
-            <h2 className="text-xl md:text-2xl font-semibold mb-2 text-[#3B1E54]">
-              Why RemiChat?
-            </h2>
+            {/* <h2 className="text-xl md:text-2xl font-semibold mb-2 text-[#3B1E54]">
+              Features of RemiChat
+            </h2> */}
             <h3 className="text-3xl md:text-4xl font-bold mb-4 text-[#3B1E54]">
-              Our mission is user privacy
+              Features of RemiChat
             </h3>
             <p className="text-[#3B1E54]/80 leading-relaxed">
               We wish to provide a platform where users can connect with each,
@@ -102,12 +88,7 @@ export default function Home() {
               we believe in the power of open-source
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-8">
-            <StatCard value="2B+" label="Message Sent" />
-            <StatCard value="500M" label="Active User" />
-            <StatCard value="150+" label="Available country" />
-            <StatCard value="10x" label="Send & Upload Speed" />
-          </div>
+          <Features />
         </div>
       </section>
       <Footer />
