@@ -8,7 +8,7 @@ interface StatsCounterProps {
 
 export function StatsCounter({ signups, donations }: StatsCounterProps) {
   return (
-    <div className="flex flex-col sm:flex-row items-center gap-8 py-8">
+    <div className="flex flex-row items-center gap-8 py-8">
       {/* Signups Counter */}
       <div className="flex items-center gap-6">
         <div className="w-12 h-12 rounded-full bg-[#D4BEE4] flex items-center justify-center">

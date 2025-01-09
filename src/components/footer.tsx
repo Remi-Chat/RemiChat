@@ -16,13 +16,15 @@ export function Footer() {
             Support our project by joining our waitlist and contributing to the
             donations.
           </p>
-          <Button
-            size="lg"
-            className="bg-[#3B1E54] hover:bg-[#3B1E54]/90"
-            onClick={() => window.open("https://ko-fi.com/remichat", "_blank")}
+          <Link
+            href="https://ko-fi.com/remichat"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Contribute
-          </Button>
+            <Button size="lg" className="bg-[#3B1E54] hover:bg-[#3B1E54]/90">
+              Contribute
+            </Button>
+          </Link>
         </div>
       </div>
 
