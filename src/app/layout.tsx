@@ -16,6 +16,18 @@ export const metadata: Metadata = {
   title: "RemiChat",
   description:
     "RemiChat is a community driven platform which allows you to connect to people around the world. Its, safe, secure and open!",
+  keywords: [
+    "chat platform",
+    "Omegle alternative",
+    "EmeraldChat alternative",
+    "Anonymous chat",
+    "online chat",
+    "community chat",
+    "secure chat",
+    "global chat",
+    "connect with people",
+    "safe chat",
+  ],
 };
 
 export default function RootLayout({
