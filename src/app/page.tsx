@@ -39,12 +39,14 @@ export default function Home() {
                 open!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Button
-                  size="lg"
-                  className="bg-[#3B1E54] hover:bg-[#3B1E54]/90 w-full sm:w-auto"
-                >
-                  Join the Waitlist
-                </Button>
+                <Link href="/waitlist">
+                  <Button
+                    size="lg"
+                    className="bg-[#3B1E54] hover:bg-[#3B1E54]/90 w-full sm:w-auto"
+                  >
+                    Join the Waitlist
+                  </Button>
+                </Link>
                 <Link
                   href="https://ko-fi.com/remichat"
                   target="_blank"
