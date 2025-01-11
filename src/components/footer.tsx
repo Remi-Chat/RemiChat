@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Twitter, Facebook, Instagram, Github } from "lucide-react";
+import { Twitter, Github, Mail } from "lucide-react";
 import Image from "next/image";
 
 export function Footer() {
@@ -67,7 +67,8 @@ export function Footer() {
                 Works
               </Link>
               <Link
-                href="#"
+                href="mailto:remichat.live@gmail.com
+"
                 className="text-sm text-gray-600 hover:text-[#3B1E54]"
               >
                 Support
@@ -80,15 +81,20 @@ export function Footer() {
                 <Twitter className="w-5 h-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-[#3B1E54]">
-                <Facebook className="w-5 h-5" />
-                <span className="sr-only">Facebook</span>
+              <Link
+                href="mailto:remichat.live@gmail.com"
+                className="text-gray-400 hover:text-[#3B1E54]"
+              >
+                <Mail className="w-5 h-5" />
+                <span className="sr-only">Mail</span>
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-[#3B1E54]">
-                <Instagram className="w-5 h-5" />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-[#3B1E54]">
+
+              <Link
+                href="https://github.com/remi-Chat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-[#3B1E54]"
+              >
                 <Github className="w-5 h-5" />
                 <span className="sr-only">GitHub</span>
               </Link>

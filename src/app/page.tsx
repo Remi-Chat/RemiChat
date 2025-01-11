@@ -17,6 +17,7 @@ export default function Home() {
 
       <AuroraBackground>
         <section
+          id="home"
           className="max-w-[95%] sm:max-w-[90%] md:max-w-[70%] mx-auto"
           style={{
             height: "fit-content",
@@ -78,12 +79,15 @@ export default function Home() {
       </AuroraBackground>
 
       {/* Carousel Section */}
-      <section className="py-12 mt-[2rem] md:mt-[0rem]">
+      <section id="why-us" className="py-12 mt-[2rem] md:mt-[0rem]">
         <AppleCardsCarouselDemo />
       </section>
 
       {/* Features Section */}
-      <section className="py-12 md:pt-18 md:pb-24 px-4 md:px-6 max-w-[95%] sm:max-w-[90%] md:max-w-[80%] mx-auto">
+      <section
+        id="features"
+        className="py-12 md:pt-18 md:pb-24 px-4 md:px-6 max-w-[95%] sm:max-w-[90%] md:max-w-[80%] mx-auto"
+      >
         <div className="bg-white rounded-3xl p-6 md:p-12 shadow-lg">
           <div className="max-w-2xl mb-8 md:mb-12">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#3B1E54]">

@@ -21,6 +21,17 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const top = section.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
@@ -43,15 +54,34 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          {["Home", "Why us?", "Features", "About Us"].map((item) => (
-            <Link
-              key={item}
-              href="#"
-              className={`text-sm font-medium transition-all duration-300 text-gray-600 hover:text-[#3B1E54]`}
-            >
-              {item}
-            </Link>
-          ))}
+          <Link
+            href="#home"
+            className={`text-sm font-medium transition-all duration-300 text-gray-600 hover:text-[#3B1E54]`}
+            onClick={() => scrollToSection("home")}
+          >
+            Home
+          </Link>
+          <Link
+            href="#why-us"
+            className={`text-sm font-medium transition-all duration-300 text-gray-600 hover:text-[#3B1E54]`}
+            onClick={() => scrollToSection("why-us")}
+          >
+            Why us?
+          </Link>
+          <Link
+            href="#features"
+            className={`text-sm font-medium transition-all duration-300 text-gray-600 hover:text-[#3B1E54]`}
+            onClick={() => scrollToSection("features")}
+          >
+            Features
+          </Link>
+          <Link
+            href="#about-us"
+            className={`text-sm font-medium transition-all duration-300 text-gray-600 hover:text-[#3B1E54]`}
+            onClick={() => scrollToSection("about-us")}
+          >
+            About Us
+          </Link>
         </nav>
 
         {/* Desktop-only Support Button */}
@@ -97,15 +127,34 @@ export function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <nav className="flex flex-col items-center gap-4 py-4">
-            {["Home", "Why us?", "Features", "About Us"].map((item) => (
-              <Link
-                key={item}
-                href="#"
-                className="text-sm font-medium text-gray-600 hover:text-[#3B1E54]"
-              >
-                {item}
-              </Link>
-            ))}
+            <Link
+              href="#home"
+              className="text-sm font-medium text-gray-600 hover:text-[#3B1E54]"
+              onClick={() => scrollToSection("home")}
+            >
+              Home
+            </Link>
+            <Link
+              href="#why-us"
+              className="text-sm font-medium text-gray-600 hover:text-[#3B1E54]"
+              onClick={() => scrollToSection("why-us")}
+            >
+              Why us?
+            </Link>
+            <Link
+              href="#features"
+              className="text-sm font-medium text-gray-600 hover:text-[#3B1E54]"
+              onClick={() => scrollToSection("features")}
+            >
+              Features
+            </Link>
+            <Link
+              href="#about-us"
+              className="text-sm font-medium text-gray-600 hover:text-[#3B1E54]"
+              onClick={() => scrollToSection("about-us")}
+            >
+              About Us
+            </Link>
           </nav>
         </div>
       )}
