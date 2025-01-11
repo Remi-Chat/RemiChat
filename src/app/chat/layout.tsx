@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-export const Logo = () => {
+const Logo = () => {
   return (
     <Link
       href="#"
@@ -33,7 +33,7 @@ export const Logo = () => {
   );
 };
 
-export const LogoIcon = () => {
+const LogoIcon = () => {
   return (
     <Link
       href="#"
@@ -44,7 +44,7 @@ export const LogoIcon = () => {
   );
 };
 
-export function SidebarDemo({ children }: { children: React.ReactNode }) {
+function SidebarDemo({ children }: { children: React.ReactNode }) {
   const links = [
     {
       label: "Profile",
